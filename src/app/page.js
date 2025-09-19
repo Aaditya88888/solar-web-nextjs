@@ -98,13 +98,24 @@ export default function Home() {
 
           {/* Floating Image */}
           <section className="mt-10 animate-float">
-            <Image
+            {/* <Image
               src="/DivyRedesign.webp"
               alt="Design"
               width={600}
               height={400}
               priority
-            />
+            /> */}
+
+            <div className="w-full">
+              <Image
+                src="/DivyRedesign.webp"
+                alt="Design"
+                width={1920} // original width of the image
+                height={1080} // original height (keeps aspect ratio)
+                className="w-full h-auto"
+                priority
+              />
+            </div>
           </section>
 
           {/* Other Sections */}

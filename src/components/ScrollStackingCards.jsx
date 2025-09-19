@@ -32,7 +32,7 @@ const ScrollStackingCards = ({ content }) => {
   }, []);
 
   return (
-    <div className="cards-container mt-20">
+    <div className="cards-container mt-60">
       {content.map((card, i) => (
         <div
           key={i}
