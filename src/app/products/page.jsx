@@ -3,7 +3,8 @@
 // import React from "react";
 // import Footer from "@/components/Footer";
 // import { motion } from "framer-motion";
-// import { Link } from "react-router-dom";
+// import Link from "next/link";
+
 // const Genset1 = "/Genset.webp";
 // const Micro = "/Micro.webp";
 // const SolarP = "/SolarP.webp";
@@ -161,7 +162,7 @@
 //                       </div>
 //                       <div className="mt-6 flex justify-center">
 //                         <Link
-//                           to={item.to}
+//                           href={item.to} // ✅ Fixed here
 //                           className="flex items-center justify-center gap-2 bg-green-800 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition"
 //                         >
 //                           Read More
@@ -172,6 +173,7 @@
 //                 ))}
 //               </div>
 //             </motion.section>
+
 //             {/* Safety Solutions */}
 //             <motion.section
 //               className="bg-[#000000] rounded-sm py-20 text-white"
@@ -214,7 +216,7 @@
 //                       </div>
 //                       <div className="mt-6 flex justify-center">
 //                         <Link
-//                           to={item.to}
+//                           href={item.to} // ✅ Fixed here
 //                           className="flex items-center justify-center gap-2 bg-green-800 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition"
 //                         >
 //                           Read More
@@ -268,7 +270,7 @@
 //                       </div>
 //                       <div className="mt-6 flex justify-center">
 //                         <Link
-//                           to={item.to}
+//                           href={item.to} // ✅ Fixed here
 //                           className="flex items-center justify-center gap-2 bg-green-800 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition"
 //                         >
 //                           Read More
@@ -444,9 +446,9 @@ function Product() {
 
   return (
     <div>
-      <div className="flex items-center justify-center min-h-screen">
+      <div className="flex items-center justify-center">
         <div>
-          <section className="max-h-screen relative py-20 text-center bg-gradient-to-br from-white to-gray-100 GetFontSol max-w-7xl">
+          <section className="relative py-20 text-center bg-gradient-to-br from-white to-gray-100 GetFontSol max-w-7xl mx-auto">
             {/* Heading */}
             <div className="relative z-10">
               <motion.h1
@@ -508,7 +510,7 @@ function Product() {
                       </div>
                       <div className="mt-6 flex justify-center">
                         <Link
-                          href={item.to} // ✅ Fixed here
+                          href={item.to}
                           className="flex items-center justify-center gap-2 bg-green-800 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition"
                         >
                           Read More
@@ -562,7 +564,7 @@ function Product() {
                       </div>
                       <div className="mt-6 flex justify-center">
                         <Link
-                          href={item.to} // ✅ Fixed here
+                          href={item.to}
                           className="flex items-center justify-center gap-2 bg-green-800 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition"
                         >
                           Read More
@@ -616,7 +618,7 @@ function Product() {
                       </div>
                       <div className="mt-6 flex justify-center">
                         <Link
-                          href={item.to} // ✅ Fixed here
+                          href={item.to}
                           className="flex items-center justify-center gap-2 bg-green-800 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition"
                         >
                           Read More
@@ -683,7 +685,8 @@ function Product() {
         </div>
       </div>
 
-      <section className="mt-[2900px]">
+      {/* Footer in normal flow */}
+      <section className="mt-20">
         <Footer />
       </section>
     </div>

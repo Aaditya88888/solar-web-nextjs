@@ -1,85 +1,209 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
+import Footer from "@/components/Footer";
 
-const BecomePartner = () => {
+const fadeUp = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
+
+const BecomeOurIndividualPartner = () => {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12 font-inter text-gray-800">
-      {/* Title */}
-      <h1 className="text-2xl md:text-3xl font-semibold mb-4">
-        Work With Us, Become a{" "}
-        <span className="font-bold">DIVY Solar Partner</span>
-      </h1>
+    <div className="bg-[#f8f7f0] text-gray-800">
+      {/* Hero Section */}
+      <section className="max-w-6xl mx-auto px-6 py-16 text-center">
+        <motion.h1
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900"
+        >
+          Become Our Individual Partner
+        </motion.h1>
 
-      {/* Intro Paragraph */}
-      <p className="text-base leading-relaxed text-justify mb-8">
-        Join hands with <strong>DIVY Solar</strong>, one of India’s leading
-        solar energy solution providers, and be a part of the clean energy
-        revolution. We are actively expanding our dealer and partner network
-        across India and are looking for passionate, driven, and growth-oriented
-        individuals or businesses to collaborate with us.
-      </p>
+        {/* Sub Heading (as requested) */}
+        <motion.h1
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="mt-3 text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800"
+        >
+          Earn with Divy Power.{" "}
+          <span className=" text-green-800">No Investment Required.</span>
+        </motion.h1>
 
-      {/* Why Partner */}
-      <h2 className="text-xl font-semibold text-brandBlue mb-3">
-        Why Partner with DIVY Solar?
-      </h2>
-      <ul className="list-disc list-inside space-y-2 text-base leading-relaxed mb-8">
-        <li>
-          <strong>Trusted Brand:</strong> Recognized for quality, innovation,
-          and customer satisfaction.
-        </li>
-        <li>
-          <strong>High-Quality Products:</strong> MNRE-approved, efficient, and
-          durable solar panels and systems.
-        </li>
-        <li>
-          <strong>Marketing & Technical Support:</strong> Complete training,
-          marketing material, and on-ground support to help you succeed.
-        </li>
-        <li>
-          <strong>Attractive Margins:</strong> Competitive pricing and strong
-          profit potential.
-        </li>
-        <li>
-          <strong>Fast-Growing Industry:</strong> Be a part of India’s booming
-          solar sector with massive future potential.
-        </li>
-      </ul>
+        <motion.p
+          variants={fadeUp}
+          initial="hidden"
+          animate="show"
+          className="mt-5 text-base sm:text-lg text-gray-600 max-w-3xl mx-auto"
+        >
+          Turn your network into income while contributing to India’s clean
+          energy mission.
+        </motion.p>
+
+        {/* Small highlight strip */}
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 0.6, delay: 0.25 }}
+          className="mx-auto mt-6 h-1 w-24 origin-left rounded-full bg-green-700"
+        />
+      </section>
+
+      {/* How It Works */}
+      <section className="bg-[#f8f7f0]">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.h2
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.3 }}
+            className="text-2xl md:text-3xl font-bold mb-4 text-black"
+          >
+            How It Works
+          </motion.h2>
+          <motion.ul
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.3 }}
+            className="list-disc list-inside space-y-2 text-gray-700"
+          >
+            <li>Share solar leads with us.</li>
+            <li>We handle consultation, installation, and service.</li>
+            <li>
+              You earn an attractive commission for every successful sale.
+            </li>
+          </motion.ul>
+        </div>
+      </section>
+
+      {/* Work Models */}
+      <section className="py-12 max-w-6xl mx-auto px-6">
+        <motion.h2
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+          className="text-2xl md:text-3xl font-bold mb-6 text-black"
+        >
+          Work Models Available
+        </motion.h2>
+        <div className="grid md:grid-cols-3 gap-6">
+          {[
+            {
+              title: "Commission Basis",
+              desc: "Earn per closed sale you refer.",
+            },
+            {
+              title: "Sublet Basis",
+              desc: "Have projects executed under your own branding with our support.",
+            },
+            {
+              title: "Vendor Installation",
+              desc: "Work with us as an on-call installer for projects in your area.",
+            },
+          ].map((card, i) => (
+            <motion.div
+              key={card.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: i * 0.08 }}
+              className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/5"
+            >
+              <h3 className="text-lg font-semibold text-gray-900">
+                {card.title}
+              </h3>
+              <p className="mt-2 text-gray-600">{card.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Benefits */}
+      <section className="bg-[#f8f7f0] py-12">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.h2
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.3 }}
+            className="text-2xl md:text-3xl font-bold mb-6 text-black"
+          >
+            Benefits for You
+          </motion.h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <li>Zero Investment – Start immediately, no inventory needed.</li>
+              <li>
+                Unlimited Earnings – The more leads you share, the more you
+                earn.
+              </li>
+              <li>Flexible Work – Choose your own hours, no fixed targets.</li>
+            </ul>
+            <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <li>
+                Marketing Support – Product info, pitch decks, and guidance.
+              </li>
+              <li>
+                Brand Leverage – Build trust with Divy Power’s reputation.
+              </li>
+              <li>
+                Dedicated Assistance – Get help from our partner success team.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
       {/* Who Can Join */}
-      <h2 className="text-xl font-semibold text-brandBlue mb-3">
-        Who Can Join?
-      </h2>
-      <ul className="list-disc list-inside space-y-2 text-base leading-relaxed mb-8">
-        <li>Solar product dealers or distributors</li>
-        <li>Electrical contractors and engineers</li>
-        <li>Entrepreneurs and startups interested in renewable energy</li>
-        <li>Real estate and infrastructure professionals</li>
-        <li>NGOs or institutions promoting sustainable energy</li>
-      </ul>
+      <section className="py-12 max-w-6xl mx-auto px-6">
+        <motion.h2
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+          className="text-2xl md:text-3xl font-bold mb-4 text-black"
+        >
+          Who Can Join
+        </motion.h2>
+        <motion.ul
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+          className="list-disc list-inside space-y-2 text-gray-700"
+        >
+          <li>Freelancers & entrepreneurs</li>
+          <li>Students</li>
+          <li>Corporate employees</li>
+          <li>Influencers & environmental advocates</li>
+        </motion.ul>
+      </section>
 
-      {/* What We Offer */}
-      <h2 className="text-xl font-semibold text-brandBlue mb-3">
-        What We Offer
-      </h2>
-      <ul className="list-disc list-inside space-y-2 text-base leading-relaxed mb-8">
-        <li>Product supply and logistics support</li>
-        <li>Installation and technical guidance</li>
-        <li>Sales training and business consultation</li>
-        <li>Assistance with government schemes and subsidies</li>
-        <li>Lead generation and local promotion support</li>
-      </ul>
+      {/* CTA */}
+      <section className="text-center py-12">
+        <a
+          href="https://forms.gle/qkyuDXiMSBF4Y9gq5
+"
+        >
+          <motion.button
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.98 }}
+            className="bg-green-700 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-green-800 transition"
+          >
+            Start Earning as a Partner
+          </motion.button>
+        </a>
+      </section>
 
-      {/* Call to Action */}
-      <p className="text-base font-bold mt-6">
-        Ready to Partner with Us?{" "}
-        <span className="text-brandBlue underline cursor-pointer font-bold">
-          Click the Link Below
-        </span>
-      </p>
+      <Footer />
     </div>
   );
 };
 
-export default BecomePartner;
+export default BecomeOurIndividualPartner;

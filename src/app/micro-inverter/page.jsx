@@ -4,8 +4,6 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Footer from "@/components/Footer";
-// import Lap from "../Images/IMG-20250805-WA0071(1).webp";
-const Lap = "/IMG-20250805-WA0071(1).webp";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -20,7 +18,7 @@ const fadeUp = {
   }),
 };
 
-const SolarPumpPage = () => {
+const MicroInverter = () => {
   return (
     <>
       <div className="bg-gray-50 text-gray-800 font-sans py-20">
@@ -39,7 +37,7 @@ const SolarPumpPage = () => {
               initial="hidden"
               animate="visible"
               variants={fadeUp}
-              src={Lap}
+              src="https://divyby.redspace.in/assets/images/updated-images/Inverter%20img-min.jpg"
               alt="Solar Panel Installation"
               className="w-full h-auto rounded shadow"
             />
@@ -49,25 +47,27 @@ const SolarPumpPage = () => {
               animate="visible"
               variants={fadeUp}
             >
-              <h2 className="text-2xl font-semibold mb-4">SOLAR PUMP</h2>
-              <p className="text-gray-500">
-                Divy Power’s solar pumps offer a reliable and sustainable
-                solution for water pumping needs in remote areas, farms, and
-                rural locations. Engineered for efficiency, these pumps operate
-                entirely on solar energy, eliminating dependency on conventional
-                power sources. This makes them an excellent choice for
-                communities and agricultural setups seeking eco-friendly water
-                solutions while reducing operational costs.
+              <h2 className="text-2xl font-semibold mb-4">Micro Inverter</h2>
+              <p className=" text-gray-500">
+                Our micro inverters are engineered to enhance the efficiency and
+                reliability of your solar panel system, providing a cutting-edge
+                solution for energy conversion. Unlike conventional inverters
+                that process power for an entire solar array, micro inverters
+                operate individually on each panel, ensuring that every module
+                functions at peak performance. This decentralized approach
+                eliminates energy losses caused by shading or varying panel
+                efficiency, making them an ideal choice for maximizing solar
+                output.
               </p>
               <p className="mt-4 text-gray-500">
-                Designed to support irrigation, water supply systems, and
-                livestock management, Divy Power’s solar pumps provide
-                consistent and effective water distribution. Whether irrigating
-                fields, filling reservoirs, or supplying drinking water to
-                livestock, these pumps ensure uninterrupted performance. Their
-                ability to function in off-grid locations makes them
-                indispensable for farmers and rural enterprises seeking
-                independent water management solutions.
+                By optimizing energy conversion at the panel level, our micro
+                inverters significantly improve the overall productivity of your
+                system. Even if some panels are partially shaded or experience
+                efficiency variations, the rest continue to generate power
+                without disruption. This makes them particularly beneficial for
+                installations in areas with unpredictable sunlight exposure or
+                complex roof layouts, ensuring maximum energy yield throughout
+                the day.
               </p>
             </motion.section>
             <div className="flex items-start gap-6">
@@ -75,7 +75,8 @@ const SolarPumpPage = () => {
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp}
-                src={Lap}
+                src="https://divyby.redspace.in/assets/images/updated-images/inverter%201.png"
+                alt="Solar Panels Field"
                 className="w-[380px] h-[270px] rounded shadow"
               />
 
@@ -84,25 +85,27 @@ const SolarPumpPage = () => {
                 animate="visible"
                 variants={fadeUp}
               >
-                <p className="  text-gray-500">
-                  One of the standout advantages of these solar pumps is their
-                  minimal maintenance requirement. Built with durable components
-                  and advanced technology, they demand little upkeep, making
-                  them a hassle-free investment. With a long operational
-                  lifespan, they remain highly effective even under demanding
-                  weather conditions, ensuring a reliable water supply without
-                  frequent servicing or costly repairs.
+                <p className=" text-gray-500">
+                  Reliability is a core feature of our micro inverters, built
+                  with advanced technology to withstand diverse environmental
+                  conditions. Their durable design ensures long-term performance
+                  while reducing the risks associated with a single point of
+                  failure—common in traditional centralized inverter systems.
+                  With built-in monitoring capabilities, users can track
+                  real-time energy production, allowing for proactive
+                  maintenance and efficiency adjustments.
                 </p>
               </motion.section>
             </div>
             <p className="mt-4 text-gray-500">
-              Divy Power has designed its solar pumps to withstand extreme
-              environments, from scorching summers to cold winters. Their rugged
-              construction ensures optimal functionality, even in challenging
-              landscapes, offering users peace of mind and consistent
-              performance. By harnessing clean energy, these pumps contribute to
-              environmental sustainability while delivering practical solutions
-              for agricultural and rural water needs.
+              Perfect for homeowners and businesses alike, our micro inverters
+              offer a scalable and cost-effective solar solution. Whether you’re
+              installing a residential system to lower electricity bills or
+              implementing a commercial setup for sustainable energy use, micro
+              inverters ensure the highest return on investment. Their ability
+              to provide consistent power output, along with superior
+              adaptability, makes them a smart choice for those looking to
+              optimize their solar energy potential.
             </p>
           </div>
 
@@ -131,7 +134,7 @@ const SolarPumpPage = () => {
               </h3>
               {[
                 "Solar-pannel",
-                "Micro-Inverter",
+                "Solar-Pump",
                 "Earthing",
                 "LA",
                 "Diesel/Petrol Genset",
@@ -145,6 +148,18 @@ const SolarPumpPage = () => {
                 </Link>
               ))}
             </motion.div>
+
+            <motion.div className="bg-white p-6 rounded shadow text-sm space-y-3">
+              <div className="flex items-start gap-2">
+                <span className="font-bold text-gray-700 w-20">Email:</span>
+                <a
+                  href="mailto:info@example.com"
+                  className="text-green-700 hover:underline"
+                >
+                  Info@divypower.com
+                </a>
+              </div>
+            </motion.div>
           </aside>
         </div>
       </div>
@@ -153,4 +168,4 @@ const SolarPumpPage = () => {
   );
 };
 
-export default SolarPumpPage;
+export default MicroInverter;
